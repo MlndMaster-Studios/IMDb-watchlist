@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "Black Phone 2 (2025)": "https://www.imdb.com/title/tt29644189/"
     },
 
-    "TV SHOWS”": {
+    "TV SHOWS": {
       "Severance - Upcoming Season (2022)": "https://www.imdb.com/title/tt11280740/",
       "NOS4A2 (2019-2020)": "https://www.imdb.com/title/tt2866360/",
       "Andor (2022-2025)": "https://www.imdb.com/title/tt9253284/",
@@ -69,9 +69,9 @@ document.addEventListener("DOMContentLoaded", () => {
       "The Boys (2019-)": "https://www.imdb.com/title/tt1190634/",
       "The Good Place (2016-2020)": "https://www.imdb.com/title/tt4955642/",
       "War of the Worlds (2019-2022)": "https://www.imdb.com/title/tt9686194/",
-      " ()": "https://www.imdb.com/title//",
-      " ()": "https://www.imdb.com/title//",
-      "Us (2019)": "https://www.imdb.com/title/tt6857112/"
+      "I Am Not Okay with This (2020)": "https://www.imdb.com/title/tt9446688/",
+      "The Sandman (2022-2025)": "https://www.imdb.com/title/tt1751634/",
+      "Skull Island (2023)": "https://www.imdb.com/title/tt13929756/"
     }
   };
 
