@@ -1,5 +1,8 @@
-/* ===== THEME VARIABLES ===== */
+/* =========================
+   THEME VARIABLES
+   ========================= */
 :root {
+  /* Brand Theme (default) */
   --bg: linear-gradient(-45deg, #100018, #1e0030, #2a0050, #100018);
   --text: #e8e8ff;
   --card: rgba(30, 41, 59, 0.55);
@@ -10,17 +13,25 @@
   --checkbox-glow: rgba(139, 92, 246, 0.6);
 }
 
-/* ===== BODY & GENERAL ===== */
+
+
+/* =========================
+   GENERAL LAYOUT
+   ========================= */
 body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
   font-family: "Inter", "Poppins", sans-serif;
-  background: var(--bg) !important;
-  background-size: 400% 400% !important;
-  animation: gradientFlow 20s ease infinite !important;
-  color: var(--text) !important;
+  background: var(--bg);
+  background-size: 400% 400%;
+  animation: gradientFlow 20s ease infinite;
+  color: var(--text);
   overflow-x: hidden;
+}
+
+body.horror-theme {
+  background-size: cover;
 }
 
 @keyframes gradientFlow {
@@ -29,11 +40,18 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-h1, h2, h3 {
+header {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.3rem;
   font-weight: 600;
 }
 
-h1 span, h2 span, h3 span {
+h1 span {
   background: linear-gradient(270deg, var(--accent), #4f46e5, #0f172a);
   background-size: 600% 600%;
   -webkit-background-clip: text;
@@ -49,59 +67,98 @@ h1 span, h2 span, h3 span {
 
 p {
   color: var(--muted);
-  margin-top: 4px;
-  margin-bottom: 8px;
 }
 
-/* ===== SECTIONS / CARDS ===== */
-.section, .card {
-  position: relative;
-  background: var(--card) !important;
-  backdrop-filter: blur(12px) saturate(150%);
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+/* =========================
+   SECTIONS
+   ========================= */
+.section {
+  background: var(--card);
   border-radius: var(--radius);
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border: 1px solid rgba(139, 92, 246, 0.15);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  transition: all 0.25s ease-in-out;
-  overflow: hidden;
-  will-change: transform, box-shadow, border-color;
-  --mouseX: 0;
-  --mouseY: 0;
-}
-
-.section:hover, .card:hover {
-  box-shadow: 0 8px 16px rgba(139, 92, 246, 0.15), 0 12px 24px rgba(0,0,0,0.1);
-  border-color: rgba(139, 92, 246, 0.25);
-  outline: 1px solid rgba(139,92,246,0.2);
-  outline-offset: -2px;
-  transform: translateY(-6px) translateX(calc(var(--mouseX) * 0.03)) translateY(calc(var(--mouseY) * 0.03));
-}
-
-.section h3, .card h3 {
-  color: #e0d7ff;
-  text-shadow: 0 0 4px rgba(139,92,246,0.15);
+  padding: 1.2rem 1.5rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease;
 }
 
-.section:hover h3, .card:hover h3 {
-  text-shadow: 0 0 6px rgba(139,92,246,0.25);
+.section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* ===== BUTTONS ===== */
-.toggle-btn, .dropdown-btn {
+h2 {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 0.3rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+li {
   cursor: pointer;
-  background: linear-gradient(135deg, var(--accent), #4f46e5) !important;
+  padding: 0.4rem 0;
+  transition: color 0.15s ease;
+}
+
+li:hover {
+  color: var(--accent);
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+.footer-note {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #c9c9ff;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px) saturate(160%);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.4);
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0.4px;
+}
+
+.footer-note strong {
+  color: #9d7eff;
+  font-weight: 600;
+}
+
+/* =========================
+   TOGGLE BUTTON
+   ========================= */
+.toggle-btn {
+  background: linear-gradient(135deg, var(--accent), #4f46e5);
   background-size: 400% 400%;
-  color: #fff !important;
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.8rem 1.5rem;
+  margin: 1rem auto;
+  display: block;
+  font-size: 1rem;
   font-weight: 500;
-  border-radius: 12px;
-  padding: 0.5rem 1rem;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);
   transition: all 0.3s ease;
   animation: buttonGradient 8s ease infinite;
 }
+
 
 @keyframes buttonGradient {
   0% { background-position: 0% 50%; }
@@ -109,12 +166,14 @@ p {
   100% { background-position: 0% 50%; }
 }
 
-.toggle-btn:hover, .dropdown-btn:hover {
-  filter: brightness(1.1);
-  box-shadow: 0 5px 15px rgba(139,92,246,0.4);
+.toggle-btn:hover {
+  filter: brightness(1.15);
+  transform: scale(1.05);
 }
 
-/* ===== CHECKBOXES ===== */
+/* =========================
+   CHECKBOXES
+   ========================= */
 .movie-checkbox {
   appearance: none;
   width: 18px;
@@ -126,6 +185,7 @@ p {
   cursor: pointer;
   transition: all 0.2s ease;
   position: relative;
+  box-shadow: 0 0 0 transparent;
 }
 
 .movie-checkbox:checked {
@@ -147,7 +207,9 @@ p {
   top: -1px;
 }
 
-/* ===== SCROLLBAR ===== */
+/* =========================
+   SCROLLBAR
+   ========================= */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -158,31 +220,38 @@ p {
   border-radius: 3px;
 }
 
+body.horror-theme ::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #800000, #b00000, #e50914);
+}
+
 ::-webkit-scrollbar-track {
-  background: #0f172a;
+  background: rgba(0, 0, 0, 0.2);
 }
 
-/* ===== FOOTER ===== */
-.footer-note {
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  color: #c9c9ff;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px) saturate(160%);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.4);
-  font-family: "Inter", sans-serif;
-  letter-spacing: 0.4px;
+/* =========================
+   THEME ICON
+   ========================= */
+.theme-icon {
+  font-size: 1.2rem;
+  vertical-align: middle;
+  margin-right: 8px;
+  transition: all 0.3s ease;
 }
 
-.footer-note strong {
-  color: #9d7eff;
-  font-weight: 600;
+/* Brand (default) theme */
+body:not(.horror-theme) .theme-icon {
+  color: #c084fc;
+  text-shadow: 0 0 10px rgba(192, 132, 252, 0.6);
 }
 
-/* ===== HOME BUTTON ===== */
+/* Horror theme */
+body.horror-theme .theme-icon {
+  color: #ff1a1a;
+  text-shadow: 0 0 12px rgba(255, 26, 26, 0.8);
+}
+
+
+/* ===== Home Button (Universal) ===== */
 .home-btn {
   position: fixed;
   top: 1.2rem;
@@ -218,17 +287,4 @@ p {
 
 .home-btn:active {
   transform: scale(0.96);
-}
-
-/* ===== RESPONSIVE GRID ===== */
-main {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-}
-
-@media (max-width: 640px) {
-  main {
-    grid-template-columns: 1fr;
-  }
 }
