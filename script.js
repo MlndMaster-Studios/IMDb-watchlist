@@ -7,6 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const sections = {
 
     "MOVIES": {
+      "Shaun of the Dead (2004)": "https://www.imdb.com/title/tt0365748/",
+      "Cold Storage (2025)": "https://www.imdb.com/title/tt8879928/",
+      "In Time (2011)": "https://www.imdb.com/title/tt1637688/",
+      "Now You See Me: Now You Don't (2025)": "https://www.imdb.com/title/tt4712810/",
+      "Central Intelligence (2016)": "https://www.imdb.com/title/tt1489889/",
+      "Good Fortune (2025)": "https://www.imdb.com/title/tt27543578/",
       "Black Phone 2 (2025)": "https://www.imdb.com/title/tt29644189/",
       "The Running Man (2025)": "https://www.imdb.com/title/tt14107334/",
       "Novocaine (2025)": "https://www.imdb.com/title/tt29603959/",
@@ -18,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "The Beekeeper (2024)": "https://www.imdb.com/title/tt15314262/",
       "A.I. Artificial Intelligence (2001)": "https://www.imdb.com/title/tt0212720/",
       "Companion (2025)": "https://www.imdb.com/title/tt26584495/",
-      "Donnie Darko (2001)": "https://www.imdb.com/title/tt0246578/",
+      "Donnie Darko (2001)": "Https://www.imdb.com/title/tttt0246578",
       "Pulp Fiction (1994)": "https://www.imdb.com/title/tt0110912/",
       "The Wolf of Wall Street (2013)": "https://www.imdb.com/title/tt0993846/",
       "The Shawshank Redemption (1994)": "https://www.imdb.com/title/tt0111161/",
@@ -50,6 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
 
     "TV SHOWS": {
+      "Miracle Workers (2019-2023)": "https://www.imdb.com/title/tt7529770/"
       "Severance - Upcoming Season (2022)": "https://www.imdb.com/title/tt11280740/",
       "NOS4A2 (2019-2020)": "https://www.imdb.com/title/tt2866360/",
       "Andor (2022-2025)": "https://www.imdb.com/title/tt9253284/",
