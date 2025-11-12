@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "The Beekeeper (2024)": "https://www.imdb.com/title/tt15314262/",
       "A.I. Artificial Intelligence (2001)": "https://www.imdb.com/title/tt0212720/",
       "Companion (2025)": "https://www.imdb.com/title/tt26584495/",
-      "Donnie Darko (2001)": "Https://www.imdb.com/title/tttt0246578",
+      "Donnie Darko (2001)": "Https://www.imdb.com/title/tt0246578",
       "Pulp Fiction (1994)": "https://www.imdb.com/title/tt0110912/",
       "The Wolf of Wall Street (2013)": "https://www.imdb.com/title/tt0993846/",
       "The Shawshank Redemption (1994)": "https://www.imdb.com/title/tt0111161/",
@@ -56,14 +56,14 @@ document.addEventListener("DOMContentLoaded", () => {
     },
 
     "TV SHOWS": {
-      "Miracle Workers (2019-2023)": "https://www.imdb.com/title/tt7529770/"
+      "Miracle Workers (2019-2023)": "https://www.imdb.com/title/tt7529770/",
       "Severance - Upcoming Season (2022)": "https://www.imdb.com/title/tt11280740/",
       "NOS4A2 (2019-2020)": "https://www.imdb.com/title/tt2866360/",
       "Andor (2022-2025)": "https://www.imdb.com/title/tt9253284/",
       "Murderbot (2025-)": "https://www.imdb.com/title/tt30444310/",
       "Stranger Things (2016-2025)": "https://www.imdb.com/title/tt4574334/",
       "The 100 (2014-2020)": "https://www.imdb.com/title/tt2661044/",
-      "Black Mirror (2011-)": "https://www.imdb.com/title//",
+      "Black Mirror (2011-)": "https://www.imdb.com/title/tt2085059/",
       "A Man on the Inside (2024-)": "https://www.imdb.com/title/tt26670955/",
       "The Terminal List - Upcoming Season (2022-2026)": "https://www.imdb.com/title/tt11743610/",
       "Fubar (2023-2025)": "https://www.imdb.com/title/tt13064902/",
